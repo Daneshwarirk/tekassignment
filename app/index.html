@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vanilla JS</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="app.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="container">
+		<section class="sec1">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-success" role="alert" id="successAlert" style="display: none;">
+					  
+					</div>
+					<div class="card">
+						<div class="card-header">
+							User Details
+						</div>
+						<form onsubmit="event.preventDefault();onFormSubmit()">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="name">Name : <span class="err">*</span></label>
+											<input id="name" name="name" type="text" class="form-control" placeholder="User name" autofocus="" autocomplete="off"/>
+											<p class="err" id="nameErr"></p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="email">Email : <span>*</span></label>
+											<input id="email" name="email" type="email" class="form-control" placeholder="User email"  autocomplete="off"/>
+											<p class="err" id="emailErr"></p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="phone">Phone : <span>*</span></label>
+											<input id="phone" name="phone" type="text" class="form-control" placeholder="User phone number"  autocomplete="off"/>
+											<p class="err" id="phoneErr"></p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Gender : <span>*</span></label><br />
+											<input type="radio" name="gender" value="male" id="male" checked=""> <label for="male">Male</label>
+											<input type="radio" name="gender" value="female" id="female"> <label for="female">Female</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button type="submit" class="btn btn-success">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="sec1">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-success" role="alert" id="successAlert2" style="display: none;">
+					  
+					</div>
+					<div class="card">
+						<div class="card-header">
+							Added Users
+						</div>
+						<div class="card-body">
+							<table class="table" id="usersTable">
+								<thead>
+									<th>Name</th>
+									<th>Email</th>
+									<th>Phone</th>
+									<th>Gender</th>
+									<th>Action</th>
+								</thead>
+								<tbody>
+									<tr class="nodatarow" id="nodatarow">
+										<td colspan="5">-No data found-</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<th>Name</th>
+									<th>Email</th>
+									<th>Phone</th>
+									<th>Gender</th>
+									<th>Action</th>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

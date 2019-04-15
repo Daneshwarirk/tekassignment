@@ -1,0 +1,13 @@
+section.sec1{
+	margin-top: 75px;
+}
+tr.nodatarow td{
+	text-align: center;
+}
+span.err {
+    color: red;
+}
+p.err {
+    color: red;
+    font-size: 13px;
+}
