@@ -1,2 +1,2 @@
 # tekassignment
-Simple application build in javascript
+Simple application build in vanilla javascript
